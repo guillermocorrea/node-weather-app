@@ -58,6 +58,7 @@ app.get('/weather', async (req, res) => {
       forecast: `${resWeather.weather[0].description} ${resWeather.main.temp} celcius degrees`,
       location: resMapBox.features[0].place_name,
       address,
+      feelsLike: resWeather.main.feels_like,
     });
   } catch (err) {
     console.error(err);
