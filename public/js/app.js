@@ -1,11 +1,5 @@
 console.log('app loaded!');
 
-(async () => {
-  const res = await fetch('/weather?address=boston');
-  const json = await res.json();
-  console.log(json);
-})();
-
 const getWeather = async (address) => {
   const res = await fetch(`/weather?address=${encodeURIComponent(address)}`);
   const json = await res.json();
